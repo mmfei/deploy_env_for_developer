@@ -2,8 +2,17 @@
 
 ## 执行以下命令
 ```bash
-git clone http://gitlab.mobvista.com/lingfei.weng/devops.git;
-cd devops;
+
+
+# 请先确定~/Work/htdocs/* 你本地的文件已经提交到版本记录里面
+# 请先确定~/Work/htdocs/* 你本地的文件已经提交到版本记录里面
+# 请先确定~/Work/htdocs/* 你本地的文件已经提交到版本记录里面
+
+
+
+git clone https://github.com/mmfei/deploy_env_for_developer;
+cd deploy_env_for_developer;
+git checkout mobvista;
 sh deploy.mac.sh;
 ```
 
