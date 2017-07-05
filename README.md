@@ -16,6 +16,11 @@ git checkout mobvista;
 sh deploy.mac.sh;
 ```
 
+# 修改本地host(新起一行) /etc/hosts，windows的hosts：C:\windows\system32\drivers\etc\hosts
+```
+127.0.0.1 pmd.dev.com pmdapi.dev.com
+```
+
 ## 工作目录如下:
 ```bash
 ~/Work
