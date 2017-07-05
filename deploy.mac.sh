@@ -27,7 +27,7 @@ cd ${workDir}/htdocs/;
 
 git clone http://gitlab.mobvista.com/fb/FMP_FE.git pmd.dev.com
 git clone http://gitlab.mobvista.com/fb/ad_new.git pmdadnew.dev.com
-ln -s ${workDir}/htdocs/pmdadnew.dev.com ${workDir}/htdocs/pmd.dev.com/api
+ln -s ./pmdadnew.dev.com ./pmd.dev.com/api
 git clone http://gitlab.mobvista.com/fb/adapi.git pmdapi.dev.com;
 cd ${workDir}/docker_php_nginx_mysql_redis_memcached;
 
