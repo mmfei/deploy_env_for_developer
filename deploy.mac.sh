@@ -38,8 +38,11 @@ open http://localhost/phpinfo.php;
 cd ${workDir}/htdocs/;
 
 git clone http://gitlab.mobvista.com/fb/FMP_FE.git pmd.dev.com
-git clone http://gitlab.mobvista.com/fb/ad_new.git pmdadnew.dev.com
-ln -s ./pmdadnew.dev.com ./pmd.dev.com/api
+mkdir pmd.dev.com/api;
+cd pmd.dev.com;
+git clone http://gitlab.mobvista.com/fb/ad_new.git api;
+cd ..;
+ln -s ./pmd.dev.com/api ./pmdadnew.dev.com 
 git clone http://gitlab.mobvista.com/fb/adapi.git pmdapi.dev.com;
 cd ${workDir}/docker_php_nginx_mysql_redis_memcached;
 
