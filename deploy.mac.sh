@@ -1,6 +1,18 @@
 #!/bin/bash
 pwd=`pwd`;
-workDir=~/Work;
+workDir="$1";
+if [ -z "$workDir" ]; then
+    workDir=~/Work;
+fi
+echo "work dir: {$workDir}";
+echo "are you sure?[y/n]";
+read isOk;
+if [ "$isOk" = "y" ]; then
+   echo "starting..."; 
+else
+   echo 'cancel';
+   exit
+fi
 mkdir -p ${workDir};
 cd ${workDir};
 git clone https://github.com/mmfei/docker_php_nginx_mysql_redis_memcached;
@@ -26,7 +38,8 @@ open http://localhost/phpinfo.php;
 cd ${workDir}/htdocs/;
 
 git clone http://gitlab.mobvista.com/fb/FMP_FE.git pmd.dev.com
-git clone http://gitlab.mobvista.com/fb/ad_new.git pmd.dev.com/api
+git clone http://gitlab.mobvista.com/fb/ad_new.git pmdadnew.dev.com
+ln -s ./pmdadnew.dev.com ./pmd.dev.com/api
 git clone http://gitlab.mobvista.com/fb/adapi.git pmdapi.dev.com;
 cd ${workDir}/docker_php_nginx_mysql_redis_memcached;
 
